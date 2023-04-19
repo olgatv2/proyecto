@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.icon {
+  margin: 1rem;
+  height: 2rem;
+}
