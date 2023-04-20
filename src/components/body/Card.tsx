@@ -1,27 +1,35 @@
 import React from "react";
 import './card.css'
 
-const Card: React.FC = (props) => {
+interface CardProps {
+  name: string
+  image?: string
+  type: string
+  description: string
+  placeholder?: string
+}
+
+const Card: React.FC<CardProps>= ({name, image, type, description, placeholder}: CardProps) => {
 
   return (
 
     <div className="card">
-      <div className="card__title">{props.title}</div>
+      <div className="card__title">{name}</div>
       <div className="card__body">
-        <img src={props.image} />
+        <img src={image} />
         <div className="card__body__info">
           (Estrellitas)
           <div>
             <img className='icon' src="public/play.png" />
-            {props.musicType}
+            {type}
           </div>
           <div>
             <img className='icon' src="public/music_icon.png" />
-            {props.description}
+            {description}
           </div>
           <div>
             <img className='icon' src="public/placeholder.png" />
-            {props.placeholder}
+            {placeholder}
           </div>
         </div>
       </div>
