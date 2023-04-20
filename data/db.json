@@ -1,18 +1,21 @@
 {
   "users": [
     {
-    "id":"1",
-    "name": "Paca",
-    "musicType":"Clásica",
-    "description": "Solista violín",
-    "placeholder": "Valencia"
+      "id": "1",
+      "name": "Paca",
+      "musicType": "Clásica",
+      "description": "Solista violín",
+      "placeholder": "Valencia",
+      "image": "public/violinista.jpg"
     },
     {
-      "id":"2",
+      "id": "2",
       "name": "Los Mancos",
-      "musicType":"Rock, Punk",
+      "musicType": "Rock, Punk",
       "description": "Grupo de rock",
-      "placeholder": "Alboraya, Valencia"
-    }    
+      "placeholder": "Alboraya, Valencia",
+      "image": "public/violinista.jpg"
+    }
+
   ]
 }

@@ -1,0 +1,25 @@
+.banner {
+  margin: 1rem 0rem;
+  background-color:rgb(225, 223, 223);
+  padding: 2rem;
+  text-align: center;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: space-evenly;
+
+}
+.steps h2 {
+  text-align: center;
+}
+.steps p {
+  text-align: justify;
+}
+
+.steps img {
+  width: 2rem;
+  /* background-color: white;
+  border-radius: 50%; */
+} 

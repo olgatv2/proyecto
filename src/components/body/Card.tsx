@@ -9,25 +9,24 @@ interface CardProps {
   placeholder?: string
 }
 
-const Card: React.FC<CardProps>= ({name, image, type, description, placeholder}: CardProps) => {
+const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder }: CardProps) => {
 
   return (
-
     <div className="card">
       <div className="card__title">{name}</div>
       <div className="card__body">
-        <img src={image} />
+        <img className='image' src={image} />
         <div className="card__body__info">
           (Estrellitas)
-          <div>
+          <div className="elemento">
             <img className='icon' src="public/play.png" />
             {type}
           </div>
-          <div>
+          <div className="elemento">
             <img className='icon' src="public/music_icon.png" />
             {description}
           </div>
-          <div>
+          <div className="elemento">
             <img className='icon' src="public/placeholder.png" />
             {placeholder}
           </div>
