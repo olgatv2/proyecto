@@ -6,7 +6,6 @@
 } 
 
 .footer__columns {
-  padding: 2rem;
   gap: 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -19,6 +18,7 @@
 }
 
 .copyRight{
+  padding: 0.5rem;
   width: 100%;
   background-color: white;
   font-family:sans-serif;

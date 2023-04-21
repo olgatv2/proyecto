@@ -1,0 +1,12 @@
+.card__element {
+  padding-left: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  align-items: center;
+}
+
+.card__element .icon {
+  height: 1rem;
+  width: 1rem;
+}

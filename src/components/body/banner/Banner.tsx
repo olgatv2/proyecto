@@ -1,5 +1,6 @@
 import React from "react";
 import './banner.css'
+import Step from "./steps/Step";
 
 const Banner: React.FC = () => {
 
@@ -7,21 +8,9 @@ const Banner: React.FC = () => {
     <div className="banner">
       <h1>¿Cómo funciona?</h1>
       <div className="steps">
-        <div>
-          <img src="/search.png" />
-          <h2>Paso 1</h2>
-          <p>Busca según el tipo de música que quieras</p>
-        </div>
-        <div>
-          <img src="/star.png" />
-          <h2>Paso 2</h2>
-          <p>Consulta valoraciones de nuestros usuarios</p>
-        </div>
-        <div>
-          <img src="/deal.png" />
-          <h2>Paso 3</h2>
-          <p>Contacta con los artistas que quieras</p>
-        </div>
+        <Step srcStep="/search.png" stepNumber="1" stepDescription="Busca según el tipo de música que quieras" />
+        <Step srcStep="/star.png" stepNumber="2" stepDescription="Consulta valoraciones de nuestros usuarios" />
+        <Step srcStep="/deal.png" stepNumber="3" stepDescription="Contacta con los artistas que quieras" />
       </div>
     </div>
   )

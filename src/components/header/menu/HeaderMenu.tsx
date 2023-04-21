@@ -1,10 +1,11 @@
-import React from "react";
+import React from "react"
+import './menu.css'
 
 const HeaderMenu: React.FC = () => {
   return (
     <div className='header__menu'>
-        <button className='menu__icon'>
-          <img src='public/menu.png' />
+        <button>
+          <img className='element' src='public/menu.png' />
         </button>
       </div>
   )

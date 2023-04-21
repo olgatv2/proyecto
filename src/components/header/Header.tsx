@@ -1,17 +1,16 @@
 import React from 'react'
 import HeaderMenu from './menu/HeaderMenu'
 import './header.css'
-import HeaderButton from './button/HeaderButton'
+import HeaderButtons from './button/HeaderButtons'
 
 const Header: React.FC = () => {
   return (
     <div className='header'>
-      <div>
+      <div className='header__icons'>
       <HeaderMenu />
-      <HeaderButton />
-      <HeaderButton />
+      <HeaderButtons />
       </div>
-      <img className='header__img' src="public/header.jpg" />
+      <img src="public/header.jpg" />
     </div>
   )
 }

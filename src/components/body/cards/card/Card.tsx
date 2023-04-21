@@ -7,7 +7,7 @@ interface CardProps {
   image?: string
   type: string
   description: string
-  placeholder?: string
+  placeholder: string
 }
 
 const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder }: CardProps) => {
@@ -16,28 +16,18 @@ const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder
     <div className="card">
       <div className="card__title">{name}</div>
       <div className="card__body">
-        <img className='image' src={image} />
-        <div className="card__body__info">
-          <Element />
-          <div className="elemento">
+        <img src={image} />
+        <div>
+          {/* <div>
           (Estrellitas)
-          </div>
-          <div className="elemento">
-            <img className='icon' src="public/play.png" />
-            {type}
-          </div>
-          <div className="elemento">
-            <img className='icon' src="public/music_icon.png" />
-            {description}
-          </div>
-          <div className="elemento">
-            <img className='icon' src="public/placeholder.png" />
-            {placeholder}
-          </div>
+          </div> */}
+          <Element data={type} icon="public/play.png" />
+          <Element data={description} icon="public/music_icon.png"/>
+          <Element data={placeholder} icon="public/placeholder.png"/>
         </div>
       </div>
       <div className="card__footer">
-        <img className='icon' src="public/user.png" />
+        <img src="public/user.png" />
         <a href="#">Ver perfil</a>
       </div>
     </div>

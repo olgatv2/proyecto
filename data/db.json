@@ -14,15 +14,15 @@
       "musicType": "Rock",
       "description": "Grupo de rock",
       "placeholder": "Alboraya, Valencia",
-      "image": "public/violinista.jpg"
+      "image": "public/rock.jpg"
     },
     {
       "id": "3",
-      "name": "Tonos",
+      "name": "Marianela",
       "musicType": "Pop",
       "description": "Grupo",
       "placeholder": "Alboraya, Valencia",
-      "image": "public/violinista.jpg"
+      "image": "public/pop.jpg"
     }
 
   ]

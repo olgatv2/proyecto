@@ -1,10 +1,14 @@
 import React from "react";
-
-const Element: React.FC = () => {
+import './element.css'
+interface elementProps {
+  data: string
+  icon : string
+}
+const Element: React.FC<elementProps> = ({data, icon}) => {
   return (
-    <div>
-      <img className='icon' src="public/play.png" />
-      {/* {type} */}
+    <div className="card__element">
+      <img className="icon" src={icon} />
+      {data}
     </div>
   )
 }

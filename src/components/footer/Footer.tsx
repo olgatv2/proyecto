@@ -5,19 +5,14 @@ import './footer.css'
 const Footer: React.FC = () => {
   return (
     <section className="footer">
-      {/* <Column /> */}
       <div className="footer__columns">
         <div className="column">
           <img src="#" alt="logo" />
         </div>
-        <div className="column">
-          Sobre Nosotros
-        </div>
-        <div className="column">
-          Síguenos
-        </div>
+        <Column title='Sobre nosotros'/>
+        <Column title='Síguenos' />
       </div>
-      <div className="copyRight">CopyRight</div>
+      <div className="copyRight">CopyRight ©</div>
     </section>
   )
 }

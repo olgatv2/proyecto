@@ -11,15 +11,3 @@
   justify-content: space-evenly;
 
 }
-.steps h2 {
-  text-align: center;
-}
-.steps p {
-  text-align: justify;
-}
-
-.steps img {
-  width: 2rem;
-  /* background-color: white;
-  border-radius: 50%; */
-} 

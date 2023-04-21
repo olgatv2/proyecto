@@ -1,0 +1,5 @@
+.header__buttons {
+  padding: 1rem;
+  display: flex;
+  gap:3rem;
+}

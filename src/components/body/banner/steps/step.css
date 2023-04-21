@@ -1,0 +1,10 @@
+.step h2 {
+  text-align: center;
+}
+.step p {
+  text-align: justify;
+}
+
+.step img {
+  width: 2rem;
+}
