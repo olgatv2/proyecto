@@ -1,9 +1,11 @@
 import React from "react";
+import Column from "./columns/Column";
 import './footer.css'
 
 const Footer: React.FC = () => {
   return (
     <section className="footer">
+      {/* <Column /> */}
       <div className="footer__columns">
         <div className="column">
           <img src="#" alt="logo" />

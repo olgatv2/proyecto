@@ -1,4 +1,5 @@
 import React from "react";
+import Element from "./elemento/Element";
 import './card.css'
 
 interface CardProps {
@@ -17,7 +18,10 @@ const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder
       <div className="card__body">
         <img className='image' src={image} />
         <div className="card__body__info">
+          <Element />
+          <div className="elemento">
           (Estrellitas)
+          </div>
           <div className="elemento">
             <img className='icon' src="public/play.png" />
             {type}
