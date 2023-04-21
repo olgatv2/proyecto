@@ -1,16 +1,29 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import Card from "./card/Card";
 import './cards.css'
-import { User } from "../../types/user";
-import Artist from "../../services/artist";
+import { User } from "../../../types/user";
+import Artist from "../../../services/artist";
 
+interface cardsProps {
+  type: string
+}
 
 const usuarios: Array<User> = Artist.obtain(); 
 
-const Cards: React.FC = () => {
+const Cards: React.FC<cardsProps> = ({type: selectedType}) => {
 
   const [users, setUsers] = useState<Array<User>>(usuarios)
 
+  const filter = (selectedType : string) => {
+    console.log(selectedType)
+    const filtered: Array<User> = usuarios.filter((user : User) =>  user.musicType == selectedType)
+    console.log(filtered)
+    setUsers(filtered)
+  }
+
+  useEffect(()=> {
+    if(selectedType != '') filter(selectedType)
+  },[selectedType])
 
   return (
     <div className="cards">

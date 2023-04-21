@@ -1,16 +1,27 @@
-/* .footer {
-  background-color: ;
-  flex
+.footer {
+  background-color: rgb(130, 129, 129);
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 } 
-.footer_columns {
-grid: 3 columnas, la primera más ancha
+
+.footer__columns {
+  padding: 2rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  width: 100%;
+
 }
-.column {}
+
+.column {
+  padding: 2rem
+}
 
 .copyRight{
-  font-family:;
-  font-size:;
-  etc.
-}
+  width: 100%;
+  background-color: white;
+  font-family:sans-serif;
+  font-size:0.8rem;
 
-*/
+} 
