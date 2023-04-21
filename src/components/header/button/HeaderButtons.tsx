@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import './button.css'
-
-const buttons: Array<string> = ['Regístrate', 'Entra']
+import { createPortal } from "react-dom";
+import ModalRegister from "./ModalRegister";
+import ModalSignIn from "./ModalSignIn";
 
 const HeaderButtons: React.FC = () => {
-  const [names, setNames] = useState(buttons)
+  const [showRegister, setShowRegister] = useState(false)
+  const [showSignIn, setShowSignIn] = useState(false)
 
   return (
     <div className="header__buttons">
-      {
-        names.map((name: string) => 
-          <button >{name}</button>
-        )
-      }
+      <button onClick={() => setShowRegister(true)}>Regístrate</button>
+      {showRegister && createPortal(
+        <ModalRegister onClose={() => setShowRegister(false)} />,
+        document.body // tengo que cambiar el nodo del dom
+      )}
+      <button onClick={() => setShowSignIn(true)}>Entra</button>
+      {showSignIn && createPortal(
+        <ModalSignIn onClose={() => setShowSignIn(false)} />,
+        document.body // tengo que cambiar el nodo del dom
+      )}
     </div>
   )
 }
