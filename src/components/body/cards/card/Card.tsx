@@ -7,7 +7,7 @@ interface CardProps {
   image?: string
   type: string
   description: string
-  placeholder: string
+  placeholder?: string
 }
 
 const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder }: CardProps) => {

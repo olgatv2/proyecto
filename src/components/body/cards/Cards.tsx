@@ -4,11 +4,11 @@ import './cards.css'
 import { User } from "../../../types/user";
 import Artist from "../../../services/artist";
 
+const usuarios: Array<User> = Artist.obtain(); 
+
 interface cardsProps {
   type: string
 }
-
-const usuarios: Array<User> = Artist.obtain(); 
 
 const Cards: React.FC<cardsProps> = ({type: selectedType}) => {
 

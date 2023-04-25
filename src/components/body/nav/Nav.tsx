@@ -1,27 +1,30 @@
 import React, { useState } from "react";
 import './nav.css'
-const TYPES = ['Rock', 'Clásica', 'Pop', 'Latina', 'Covers']
+import { MusicType } from "../../../types/music";
+import MusicTypes from "../../../services/musicType";
+
+const types: Array<MusicType> = MusicTypes.obtain()
 
 interface navProps {
-  filter: (type:string) => void
+  filter: (type: string) => void
 }
 
-const Nav: React.FC<navProps>= ({filter}) => {
-  const [types, setTypes] = useState(TYPES)
+const Nav: React.FC<navProps> = ({ filter }) => {
+  const [musicTypes, setMusicTypes] = useState(types)
   
-  const selecType = (singleType:string) => {
+  const selecType = (singleType: string) => {
     filter(singleType)
   }
 
   return (
     <div className="nav">
       {
-      types.map((singleType: string) => 
-      <button key={singleType} onClick={() => selecType(singleType)}>
-        {/* <img className="icon" src= 'public/music_icon.png' /> */}
-        <p className="musicType">{singleType}</p>
-      </button>
-      )
+        types.map((type : MusicType) => 
+        <button key={type.name} onClick={() => selecType(type.name)}>
+          <p>{type.name}</p>
+          <img src={type.src} alt="icon"/>
+        </button>
+        )
       }
     </div>
   )

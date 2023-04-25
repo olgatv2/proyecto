@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
 import './element.css'
+
 interface elementProps {
-  data: string
+  data?: string
   icon : string
 }
 const Element: React.FC<elementProps> = ({data, icon}) => {

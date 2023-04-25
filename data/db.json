@@ -6,7 +6,7 @@
       "musicType": "Clásica",
       "description": "Solista violín",
       "placeholder": "Valencia",
-      "image": "public/violinista.jpg"
+      "image": "public/violinist.png"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "musicType": "Rock",
       "description": "Grupo de rock",
       "placeholder": "Alboraya, Valencia",
-      "image": "public/rock.jpg"
+      "image": "public/rock.png"
     },
     {
       "id": "3",
@@ -22,8 +22,30 @@
       "musicType": "Pop",
       "description": "Grupo",
       "placeholder": "Alboraya, Valencia",
-      "image": "public/pop.jpg"
+      "image": "public/guitar.png"
     }
 
+  ],
+  "musicTypes": [
+    {
+      "name" : "Rock",
+      "src" : "public/music_icon.png"
+    },
+    {
+      "name" : "Clásica",
+      "src": "public/music_icon.png"
+    },
+    {
+      "name" : "Pop",
+      "src" : "public/music_icon.png"
+    },
+    {
+      "name" : "Latina",
+      "src" : "public/music_icon.png"
+    },
+    {
+      "name" : "Covers",
+      "src" : "public/music_icon.png"
+    }
   ]
 }
