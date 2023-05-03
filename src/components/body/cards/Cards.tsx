@@ -4,7 +4,7 @@ import './cards.css'
 import { Artist } from "../../../types/artist";
 import ArtistService from "../../../services/artistService";
 
-const artistsList: Array<Artist> = ArtistService.obtain(); 
+const artistsList: Array<Artist> = await ArtistService.obtain(); 
 
 interface cardsProps {
   type: string

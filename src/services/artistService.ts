@@ -1,13 +1,11 @@
 import dataList from '../../data/db.json'
+import PostWoman from '../infrastructure/postWoman'
 import { Artist } from '../types/artist'
 
-
 export default class ArtistService {
-
-  private static readonly apiURL : string = "http://localhost:3000"
-
-  public static obtain(): Array<Artist>{
-    return this.parse(dataList.artists)
+  public static async obtain(): Promise<Array<Artist>>{
+    const artistsList = await PostWoman.get()
+    return this.parse(artistsList)
   }
 
   private static parse(dataList: Array<Record<string, string>>): Array<Artist>{
@@ -24,6 +22,5 @@ export default class ArtistService {
 
     return artistsList
   }
-
 }
 
