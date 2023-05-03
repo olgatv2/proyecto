@@ -7,8 +7,8 @@ const Header: React.FC = () => {
   return (
     <div className='header'>
       <div className='header__icons'>
-      <HeaderMenu />
-      <HeaderButtons />
+        <HeaderMenu />
+        <HeaderButtons />
       </div>
       <img src="public/header.jpg" />
     </div>

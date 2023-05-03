@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Card from "./card/Card";
 import './cards.css'
-import { User } from "../../../types/user";
-import Artist from "../../../services/artist";
+import { Artist } from "../../../types/artist";
+import ArtistService from "../../../services/artistService";
 
-const usuarios: Array<User> = Artist.obtain(); 
+const artistsList: Array<Artist> = ArtistService.obtain(); 
 
 interface cardsProps {
   type: string
@@ -12,13 +12,11 @@ interface cardsProps {
 
 const Cards: React.FC<cardsProps> = ({type: selectedType}) => {
 
-  const [users, setUsers] = useState<Array<User>>(usuarios)
+  const [artists, setArtists] = useState<Array<Artist>>(artistsList)
 
   const filter = (selectedType : string) => {
-    console.log(selectedType)
-    const filtered: Array<User> = usuarios.filter((user : User) =>  user.musicType == selectedType)
-    console.log(filtered)
-    setUsers(filtered)
+    const filtered: Array<Artist> = artistsList.filter((artist : Artist) =>  artist.musicType == selectedType)
+    setArtists(filtered)
   }
 
   useEffect(()=> {
@@ -28,17 +26,17 @@ const Cards: React.FC<cardsProps> = ({type: selectedType}) => {
   return (
     <div className="cards">
       {
-        users.map((user: User) => (
+        artists.map((artist: Artist) => (
           <Card
-            key={user.id}
-            name={user.name}
-            type={user.musicType}
-            description={user.description}
-            placeholder={user.placeholder}
-            image={user.image}
+            key={artist.id}
+            name={artist.name}
+            type={artist.musicType}
+            description={artist.description}
+            placeholder={artist.placeholder}
+            image={artist.image}
           />
-        )
-        )}
+        ))
+      }
     </div>
   )
 }

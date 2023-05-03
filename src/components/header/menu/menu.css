@@ -1,6 +1,8 @@
 .header__menu {
   width: 4rem;
   padding: 1rem;
+  /* display: flex;
+  align-items: center; */
 }
 
 .header__menu .element{

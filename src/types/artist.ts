@@ -1,4 +1,4 @@
-export type User = {
+export type Artist = {
   id: string,
   name: string,
   musicType: string,

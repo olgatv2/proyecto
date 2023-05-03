@@ -19,6 +19,5 @@ describe("Header", () => {
 class SUT {
   static render() {
     render(<Header />)
-
   }
 }
