@@ -1,23 +1,45 @@
 .modal {
-  background-color: rgb(79, 79, 79, .8);
-  backdrop-filter: blur(3px);
+  background-color: rgb(79, 79, 79, .35);
+  backdrop-filter: blur(2px);
   position: fixed;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  background-color: rgb(180, 178, 178);
-  width: 500px;
-  padding: 10px 20px;
-  height: 60vh;
+  background-color: rgb(234, 232, 232, 0.9);
+  backdrop-filter: blur(5px);
+  width: 30vw;
+  height: auto;
+  padding: 2rem;
   margin: 10vh auto;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
-.modal-btn {
+.modal-header {
+  position: relative;
+}
+
+.modal-header button {
+  position: absolute;
+  top: 0;
+  right: 0;
   border: solid 1px gray;
   padding: 6px;
   border-radius: 4px;
+}
+/* .modal-header img {
+imagen del botón
+} */
+
+.modal-body {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 2rem 0;
 }

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import './nav.css'
 import { MusicType } from "../../../types/music";
-import MusicTypes from "../../../services/musicType";
+import MusicTypeService from "../../../services/musicTypeService";
 
-const types: Array<MusicType> = MusicTypes.obtain()
+const types: Array<MusicType> = await MusicTypeService.obtain()
 
 interface navProps {
   filter: (type: string) => void

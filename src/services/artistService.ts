@@ -1,4 +1,3 @@
-import dataList from '../../data/db.json'
 import PostWoman from '../infrastructure/postWoman'
 import { Artist } from '../types/artist'
 

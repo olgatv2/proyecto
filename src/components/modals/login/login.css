@@ -1,22 +1,36 @@
-.containerForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form {
-  max-width: 320px;
-  width: 100%;
+.login form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-
 }
+
+.login input {
+  border: solid 2px rgb(132, 131, 131);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.login input:focus {
+  border: 3px black;
+}
+
+.login div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .login-btn {
+  float: right;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: rgb(9, 9, 9, 0.9);
   color: rgb(255, 255, 255);
   font-weight: 800;
-  padding: 0.5rem 1rem;
   border: solid 2px rgb(219, 220, 219);
-  border-radius: 4px;
+}
+
+.login-btn:hover {
+  background-color: rgb(9, 9, 9, 0.3);
 }

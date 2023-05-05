@@ -2,16 +2,16 @@ import React from 'react'
 import './login.css'
 const Login: React.FC = () => {
   return (
-    <div className='containerForm'>
+    <div className='login'>
       <form>
-        <label>
-          username
+        <div>
+          <label> Username </label>
           <input type="text" placeholder='username' />
-        </label>
-        <label>
-          password
+        </div>
+        <div>
+          <label> Password </label>
           <input type="password" placeholder='password' />
-        </label>
+        </div>
         <button className='login-btn'>Login</button>
       </form>
     </div>
