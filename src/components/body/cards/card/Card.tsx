@@ -8,7 +8,7 @@ interface CardProps {
   image?: string
   type: string
   description: string
-  placeholder?: string
+  placeholder: string
 }
 
 const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder }: CardProps) => {
@@ -28,8 +28,9 @@ const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder
         </div>
       </div>
       <div className="card__footer">
-        <img src="public/user.png" />
-        <ProfileInfo />
+        <img src="public/user.png" className="icon"/>
+        <ProfileInfo name={name} src={image} keywords={type} description={description} contact={placeholder}
+        />
       </div>
     </div>
   )

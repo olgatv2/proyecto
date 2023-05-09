@@ -23,20 +23,21 @@
 }
 
 .modal-header {
-  position: relative;
+  margin-bottom: 2rem;
 }
 
 .modal-header button {
   position: absolute;
-  top: 0;
-  right: 0;
-  border: solid 1px gray;
+  top: 1rem;
+  right: 1rem;
   padding: 6px;
   border-radius: 4px;
 }
-/* .modal-header img {
-imagen del botón
-} */
+
+.modal-header img {
+  width: 1.5rem;
+  height: auto;
+}
 
 .modal-body {
   border-top: 1px solid white;

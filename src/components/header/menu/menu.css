@@ -1,11 +1,23 @@
 .header__menu {
-  width: 4rem;
-  padding: 1rem;
-  /* display: flex;
-  align-items: center; */
+  /* width: 4rem; */
+  padding: 0.5rem 1rem;
 }
 
 .header__menu .element{
-  height: 2rem;
+  height:2rem;
   width: 2rem;
+} 
+
+@media(min-width: 576px) {
+  .header__menu .element {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+  
 }

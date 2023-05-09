@@ -1,9 +1,43 @@
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  font-family: Inter typeface family, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+ body {
+   font-family: Inter typeface family, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   width: 100vw;
+ }
 
+ .icon {
+   height: 2rem;
+   width: auto;
+ }
+
+ .app {
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+ }
+
+
+ #root {
+   display: flex;
+   justify-content: center;
+ }
+
+ @media (min-width: 576px) {
+
+   body {
+     display: flex;
+     justify-content: center;
+   }
+
+ }
+
+ @media (min-width: 992px) {
+
+    #root {
+      width: 90vw;
+    }
+    .app {
+      align-items: center;
+      width: 90%;
+    }
+ }

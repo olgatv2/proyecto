@@ -22,7 +22,7 @@ const Nav: React.FC<navProps> = ({ filter }) => {
         types.map((type : MusicType) => 
         <button key={type.name} onClick={() => selecType(type.name)}>
           <p>{type.name}</p>
-          <img src={type.src} alt="icon"/>
+          <img src={type.src} alt="icon" className="icon"/>
         </button>
         )
       }

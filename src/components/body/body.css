@@ -1,8 +1,5 @@
-.modal--info {
+.body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.modal--info .content {
-  width: 20rem;
 }

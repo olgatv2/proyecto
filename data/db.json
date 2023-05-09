@@ -29,23 +29,27 @@
   "musicTypes": [
     {
       "name" : "Rock",
-      "src" : "public/music_icon.png"
+      "src" : "public/iconos/rock.png"
     },
     {
       "name" : "Clásica",
-      "src": "public/music_icon.png"
+      "src": "public/iconos/piano.png"
     },
     {
       "name" : "Pop",
-      "src" : "public/music_icon.png"
+      "src" : "public/iconos/micro.png"
     },
     {
-      "name" : "Latina",
-      "src" : "public/music_icon.png"
+      "name" : "Jazz",
+      "src" : "public/iconos/jazz.png"
     },
     {
       "name" : "Covers",
-      "src" : "public/music_icon.png"
+      "src" : "public/iconos/cover.png"
+    },
+    {
+      "name" : "Electrónica",
+      "src" : "public/iconos/electro.png"
     }
   ]
 }

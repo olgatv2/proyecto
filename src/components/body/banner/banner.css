@@ -1,13 +1,54 @@
 .banner {
-  margin: 1rem 0rem;
-  background-color:rgb(225, 223, 223);
-  padding: 2rem;
+  background-color: rgb(225, 223, 223);
   text-align: center;
+  margin: 1.5rem 0rem;
+  padding: 1.5rem;
 }
+
 .steps {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
 
+.steps .icon {
+  width: 2rem;
+  height: auto;
+  padding: none;
+}
+
+.steps h2 {
+  margin: 0.5rem;
+}
+
+.steps p {
+  margin: 0.5rem; 
+}
+
+@media(min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+  .banner {
+    margin: 1rem 0rem;
+    padding: 2rem;
+    width: 80vw;
+  }
+
+  .steps {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+  }
+
+  .steps h2 {
+    margin: 1rem;
+  }
+
+  .steps p {
+    margin: 1rem;
+  }
 }

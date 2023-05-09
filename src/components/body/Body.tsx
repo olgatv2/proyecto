@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Cards from "./cards/Cards";
 import Banner from "./banner/Banner";
 import Nav from "./nav/Nav";
-
+import './body.css'
 const Body: React.FC = () => {
 
   const [type, setType] = useState('')
@@ -12,7 +12,7 @@ const Body: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="body">
       <Nav filter={selectType} />
       <div className="bodyCards">
         {
