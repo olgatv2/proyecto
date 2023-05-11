@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../../../modals/Modal';
 import './register.css'
+import ModalRegister from '../../../modals/register/ModalRegister';
 
 const RegisterButton : React.FC = () => {
   const [showModal, setShowModal] = useState(false)
@@ -14,9 +15,9 @@ const RegisterButton : React.FC = () => {
 
   return (
     <div>
-      <button className="register" onClick={handleOpen}>Regístrate</button>
+      <button className="register__button" onClick={handleOpen}>Regístrate</button>
       {showModal && <Modal onClose={handleClose}>
-        <p>Registro</p>
+        <ModalRegister />
       </Modal> 
       }
     </div>

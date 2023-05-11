@@ -3,7 +3,8 @@ import { MusicType } from '../types/music'
 
 export default class MusicTypeService {
   public static async obtain(): Promise<Array<MusicType>>{
-    const musicTypeList = await PostWoman.getMusicTypes()
+    const endPoint:string = PostWoman.apiURL + '/musicTypes'
+    const musicTypeList = await PostWoman.get(endPoint)
     return this.parse(musicTypeList)
   }
 

@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
 }
 .modal--info .content {
+  padding: 2rem;
   width: 20rem;
+}
+.modal--info img {
+  border-radius: 5px;
+  box-shadow: inset 0 0 2rem 2rem rgb(2, 2, 2);
 }

@@ -51,5 +51,16 @@
       "name" : "Electrónica",
       "src" : "public/iconos/electro.png"
     }
+  ],
+  "users":  [
+    {
+      "name": "Marianela",
+      "password": "1234"
+    },
+    {
+      "name" : "Paca",
+      "password": "1234"
+    }
+
   ]
 }

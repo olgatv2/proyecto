@@ -3,7 +3,8 @@ import { Artist } from '../types/artist'
 
 export default class ArtistService {
   public static async obtain(): Promise<Array<Artist>>{
-    const artistsList = await PostWoman.get()
+    const endPoint:string = PostWoman.apiURL + '/artists'
+    const artistsList = await PostWoman.get(endPoint)
     return this.parse(artistsList)
   }
 
