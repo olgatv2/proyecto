@@ -3,6 +3,6 @@ export type Artist = {
   name: string,
   musicType: string,
   description: string,
-  placeholder?: string,
+  placeholder: string,
   image?: string
 }

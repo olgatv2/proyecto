@@ -7,21 +7,21 @@ import UserService from "../../src/services/userService"
 describe("Login", () => {
   it("login button is disabled by default", async () => {
     SUT.render()
-    expect(await SUT.submitButton()).toBeDisabled()
+    expect(SUT.submitButton()).toBeDisabled()
   })
 
   it("login button is enabled when inputs are filled", async () => {
     SUT.render()
     await SUT.completeForm()
-    expect(await SUT.submitButton()).toBeEnabled()
+    expect(SUT.submitButton()).toBeEnabled()
   })
 
   it('calls service when button is clicked', async () => {
-    const spy = vi.spyOn(UserService, 'signing')
-
+    const spy = vi.spyOn(UserService, 'login')
+    
     SUT.render()
     await SUT.completeForm()
-    const button = await SUT.submitButton()
+    const button = SUT.submitButton()
     fireEvent.click(button)
    
     expect(spy).toHaveBeenCalled()
@@ -32,11 +32,11 @@ describe("Login", () => {
 class SUT {
 
   static render() {
-    render(<Login />)
+    render(<Login onClose={()=>{}} />)
   }
 
-  static async submitButton() {
-    return await screen.getByRole('button')
+  static submitButton() {
+    return screen.getByRole('button')
   }
 
   static async completeForm() {
@@ -46,12 +46,12 @@ class SUT {
 
   static async fillUsername(username: String): Promise<void> {
     const input = screen.getByPlaceholderText('username')
-    fireEvent.change(input, { target: { value: 'Olga' } })
+    fireEvent.change(input, { target: { value: username } })
   }
 
   static async fillPassword(password: String): Promise<void> {
     const input = screen.getByPlaceholderText('password')
-    fireEvent.change(input, { target: { value: 'Olga' } })
+    fireEvent.change(input, { target: { value: password } })
   }
 
 }

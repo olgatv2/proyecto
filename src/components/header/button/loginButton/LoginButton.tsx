@@ -17,7 +17,7 @@ const LoginButton : React.FC = () => {
     <div>
       <button onClick={handleOpen}>Entra</button>
       {showModal && <Modal onClose={handleClose}>
-        <Login />
+        <Login onClose={handleClose} />
       </Modal> 
       }
     </div>

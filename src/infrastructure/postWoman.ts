@@ -3,9 +3,8 @@ export default class PostWoman {
 
   public static async get(baseUrl: string, queryParams?: Record<string, string>) {
     const endpoint = new Endpoint(baseUrl)
-    endpoint.setQuery(queryParams)
+    endpoint.setQuery(queryParams)  
     const url = endpoint.toUrl()
-
     const response = await fetch(url,
       {
         method: "GET",
@@ -15,14 +14,15 @@ export default class PostWoman {
     return await response.json()
   }
 
-  public static async post(payLoad?: Record<string, any>) {
+  public static async post(baseUrl:string, payLoad?: Record<string, any>) {
+
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payLoad)
     }
 
-    const response = await fetch(this.apiURL, options)
+    const response = await fetch(baseUrl, options)
     return await response.json()
   }
 }

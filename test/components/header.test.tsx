@@ -5,15 +5,18 @@ import Header from "../../src/components/header/Header"
 
 
 describe("Header", () => {
-  it("has a menu icon", async () => {
+  it("has a logo, two buttons and an image", async () => {
     SUT.render()
-    const icon = screen.queryByRole('img')
-    const access = screen.queryByRole('button', {name: 'Entrar'})
+    const icon = screen.queryByAltText('logo')
+    const access = screen.queryByRole('button', {name: 'Entra'})
     const register = screen.queryByRole('button', {name: 'Regístrate'})
+    const image = screen.queryByAltText('musicians')
     expect(icon).toBeInTheDocument()
     expect(access).toBeInTheDocument()
     expect(register).toBeInTheDocument()
+    expect(image).toBeInTheDocument()
   })
+
 })
 
 class SUT {

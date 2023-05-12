@@ -24,43 +24,105 @@
       "placeholder": "Alboraya, Valencia",
       "image": "public/guitar.png"
     }
-
   ],
   "musicTypes": [
     {
-      "name" : "Rock",
-      "src" : "public/iconos/rock.png"
+      "name": "Rock",
+      "src": "public/iconos/rock.png"
     },
     {
-      "name" : "Clásica",
+      "name": "Clásica",
       "src": "public/iconos/piano.png"
     },
     {
-      "name" : "Pop",
-      "src" : "public/iconos/micro.png"
+      "name": "Pop",
+      "src": "public/iconos/micro.png"
     },
     {
-      "name" : "Jazz",
-      "src" : "public/iconos/jazz.png"
+      "name": "Jazz",
+      "src": "public/iconos/jazz.png"
     },
     {
-      "name" : "Covers",
-      "src" : "public/iconos/cover.png"
+      "name": "Covers",
+      "src": "public/iconos/cover.png"
     },
     {
-      "name" : "Electrónica",
-      "src" : "public/iconos/electro.png"
+      "name": "Electrónica",
+      "src": "public/iconos/electro.png"
     }
   ],
-  "users":  [
+  "users": [
     {
+      "id": 1,
       "name": "Marianela",
+      "email": "maria.nela3@jiafj.ocm",
       "password": "1234"
     },
     {
-      "name" : "Paca",
+      "id": 2,
+      "name": "afkafjaf",
+      "email": "oakofakfo@ijaijfaifa.oj",
       "password": "1234"
+    },
+    {
+      "name": "afkafjaf",
+      "email": "oakofakfo@ijaijfaifa.oj",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "ada",
+      "email": "kaofkaof.afa#@kfoakfoa.oc",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "name": "aokd",
+      "email": "adad@jadoajdoia.acno",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "name": "aokd",
+      "email": "adad@jadoajdoia.ano",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "name": "aokd",
+      "email": "adad@jadoajdoia.ano",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "name": "aokdakdo",
+      "email": "adiajdojad.ofk@kdok.daijd",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "name": "aokdakdo",
+      "email": "adiajdojad.ofk@kdok.daijd",
+      "password": "123",
+      "id": 9
+    },
+    {
+      "name": "aokdakdo",
+      "email": "adiajdojad.ofk@kdok.daijd",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "name": "aokdakdo",
+      "email": "adiajdojad.ofk@kdok.daijd",
+      "password": "123",
+      "id": 11
+    },
+    {
+      "name": "adokao",
+      "email": "adad@djaid.cs",
+      "password": "123",
+      "id": 12
     }
-
   ]
 }
