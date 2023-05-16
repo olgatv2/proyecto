@@ -18,12 +18,32 @@
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+}
+
+.card__body div {
+  padding-left: 1.5rem;
+}
+
 .card__footer {
   background: #b5b4b4;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0rem;
+  gap: 1rem;
 }
+
+.card__footer .icon {
+  width: 1.7rem;
+  height: auto;
+}
+
 
 @media(min-width: 576px) {}
 

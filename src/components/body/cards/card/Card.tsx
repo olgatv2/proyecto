@@ -19,9 +19,6 @@ const Card: React.FC<CardProps> = ({ name, image, type, description, placeholder
       <div className="card__body">
         <img src={image} />
         <div>
-          {/* <div>
-          (Estrellitas)
-          </div> */}
           <Element data={type} icon="public/play.png" />
           <Element data={description} icon="public/music_icon.png"/>
           <Element data={placeholder} icon="public/placeholder.png"/>

@@ -7,8 +7,8 @@ const Header: React.FC = () => {
   return (
     <div className='header'>
       <div className='header__icons'>
-        <button onClick={() => window.location.reload()}>
-          <img className='logo' src="public/logo.jpg" alt='logo'/>
+        <button className='logo' onClick={() => window.location.reload()}>
+          <img src="public/logo.jpg" alt='logo'/>
         </button>
         <HeaderMenu />
         <HeaderButtons />

@@ -16,7 +16,6 @@ describe("Body", () => {
 })
 
 class SUT {
-
   static render() {
     render(<Body />)
   }
@@ -24,11 +23,9 @@ class SUT {
     const buttonFilter = screen.getByRole("button", { name: "Clásica icon" })
     fireEvent.click(buttonFilter)
   }
-
   static obtainClassicalCard() {
     return screen.queryByText('Solista violín')
   }
-
   static obtainPopCard() {
     return screen.queryByText('Grupo de Rock')
   }

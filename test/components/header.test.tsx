@@ -1,4 +1,3 @@
-
 import { render, screen } from "@testing-library/react"
 import React from "react"
 import Header from "../../src/components/header/Header"
@@ -11,6 +10,7 @@ describe("Header", () => {
     const access = screen.queryByRole('button', {name: 'Entra'})
     const register = screen.queryByRole('button', {name: 'Regístrate'})
     const image = screen.queryByAltText('musicians')
+    
     expect(icon).toBeInTheDocument()
     expect(access).toBeInTheDocument()
     expect(register).toBeInTheDocument()

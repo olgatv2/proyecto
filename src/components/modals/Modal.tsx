@@ -20,8 +20,6 @@ const Modal: React.FC<ModalProps> = ({ onClose, children }) => {
         </div>
       </div>
     </div>
-
-
   )
 }
 

@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <section className="footer">
       <div className="footer__columns">
         <div className="column">
-          <img src="public/logo.jpg" alt="logo" />
+          <img src="public/logo.jpg" alt="logo" className="logo" />
         </div>
         <div className="column">
           <h4>Sobre nosotros</h4>
@@ -16,9 +16,11 @@ const Footer: React.FC = () => {
         </div>
         <div className="column">
           <h4>Redes Sociales</h4>
-          <img src="public/iconos/insta.png" className="icon"/>
-          <img src="public/iconos/facebook.png" className="icon"/>
-          <img src="public/iconos/tiktok.png" className="icon"/>
+          <div>
+            <img src="public/iconos/insta.png" className="icon" />
+            <img src="public/iconos/facebook.png" className="icon" />
+            <img src="public/iconos/tiktok.png" className="icon" />
+          </div>
         </div>
       </div>
       <div className="copyRight">CopyRight ©</div>

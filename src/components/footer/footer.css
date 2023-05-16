@@ -1,21 +1,21 @@
 .footer {
   background-color: rgb(130, 129, 129);
-  gap: 1rem;
+  gap: 2rem;
   display: flex;
   flex-direction: column
 }
 
-.footer a {
-  text-decoration: none;
-  color: black;
-}
-
 .footer__columns {
   margin-top: 1rem;
-  gap: 1rem;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0.5rem;
+}
+
+.column .logo {
+  border-radius: 5px;
 }
 
 .column {
@@ -31,6 +31,16 @@
   padding: 0.5rem 0;
 }
 
+.column div {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
 .copyRight {
   padding: 0.3rem;
   background-color: rgb(211, 209, 209);
@@ -40,6 +50,7 @@
 @media (min-width: 992px) {
   .footer {
     width: 100vw;
+    gap: 1rem;
   }
 
   .footer__columns {
@@ -53,8 +64,8 @@
   }
 
   .column {
-    padding: 2rem;  
-    gap: 1rem;
+    padding: 2rem;
+    gap: 0.5rem;
     width: max-content;
   }
 
