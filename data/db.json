@@ -55,8 +55,20 @@
     {
       "id": 1,
       "name": "Marianela",
-      "email": "maria.nela3@jiafj.ocm",
+      "email": "marianela@gmail.com",
       "password": "1234"
+    },
+    {
+      "name": "pepa",
+      "email": "pepa@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "paca",
+      "email": "paca@gmail.com",
+      "password": "123",
+      "id": 4
     }
   ]
 }

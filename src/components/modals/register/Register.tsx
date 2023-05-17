@@ -25,11 +25,11 @@ const Register: React.FC <RegisterProps>= ({onClose}) => {
     setDisabled(isWrong)
   }, [userName, email, password, checked])
 
-  //Hay que controlar que no exista ya el nombre
   const handleUserName = (value: string) => {
     setUserName(value)
   }
 
+  //Hay que controlar que no exista un usuario con este email.
   const handleEmail = (value: string, error: boolean) => {
     setEmailError(error)
     setEmail(value)
@@ -42,7 +42,7 @@ const Register: React.FC <RegisterProps>= ({onClose}) => {
   }
 
   //Hay que controlar que no exista ya el usuario por el email.
-  //No se me crea a la primera :S
+  
   const validate = async () => {
     const created: User = await UserService.signing(userName, email, password)
     alert(`El usuario: ${created.name} ha sido creado`)

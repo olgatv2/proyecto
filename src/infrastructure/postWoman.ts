@@ -14,16 +14,15 @@ export default class PostWoman {
     return await response.json()
   }
 
-  public static async post(baseUrl:string, payLoad?: Record<string, any>) {
-
+  public static async post(baseUrl:string, name: string, email:string, password:string) : Promise<Record<string, any>> {
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payLoad)
+      body: JSON.stringify({name, email, password})
     }
-
-    const response = await fetch(baseUrl, options)
-    return await response.json()
+    const response :Response = await fetch(baseUrl, options)
+    const created = await response.json()
+    return await created
   }
 }
 

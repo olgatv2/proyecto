@@ -1,21 +1,22 @@
 import React, { useState } from 'react'
+import UserService from '../../../../services/userService'
 
 interface EmailProps {
-  onChange : (value:string, error: boolean) => void
+  onChange: (value: string, error: boolean) => void
 }
 
-const Email: React.FC<EmailProps> = ({onChange}) => {
+const Email: React.FC<EmailProps> = ({ onChange }) => {
   const [email, setEmail] = useState<string>('')
   const [wrongEmail, setWrongEmail] = useState<string>('')
 
-  const emailRE : RegExp =/[a-zA-Z0-9!#$%&'*\/=?^_`{|}~+-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_`{|}~+-])+@[a-zA-Z0-9]([^@&%$/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?/ 
+  const emailRE: RegExp = /[a-zA-Z0-9!#$%&'*\/=?^_`{|}~+-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_`{|}~+-])+@[a-zA-Z0-9]([^@&%$/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?/
 
   const handleEmail = (value: string) => {
-    let error:string = ''
-    if(!emailRE.test(value)) error = 'bad.email'
-    onChange(value, Boolean(error))
+    let error: string = ''
+    if (!emailRE.test(value)) error = 'bad.email'
     setWrongEmail(error)
     setEmail(value)
+    onChange(value, Boolean(error))
   }
 
   return (

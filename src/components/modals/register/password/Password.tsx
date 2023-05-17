@@ -11,7 +11,7 @@ const Password: React.FC<PasswordProps> = ({ onChange }) => {
 
   useEffect(() => {
     onChange(password, checkError)
-  }, [checked])
+  }, [password, checked])
   
   const handlePassword = (value : string) => {
     setPassword(value)
