@@ -50,7 +50,7 @@ describe("Register", () => {
 
 class SUT {
   static render() {
-    render(<Register />)
+    render(<Register onClose={() => {}}/>)
   }
 
   static async submitButton() {

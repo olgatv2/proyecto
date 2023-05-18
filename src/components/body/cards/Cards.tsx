@@ -27,13 +27,14 @@ const Cards: React.FC<cardsProps> = ({type: selectedType}) => {
     <div className="cards">
       {
         artists.map((artist: Artist) => (
-          <Card
+          <Card 
             key={artist.id}
             name={artist.name}
             type={artist.musicType}
-            description={artist.description}
+            grouping={artist.grouping}
             placeholder={artist.placeholder}
             image={artist.image}
+            info = {artist}
           />
         ))
       }

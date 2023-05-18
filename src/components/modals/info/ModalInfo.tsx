@@ -1,23 +1,21 @@
 import React from 'react'
 import './modalInfo.css'
+import { Artist } from '../../../types/artist'
 
 interface ModalInfoProps {
-  name: string
-  src?: string
-  description: string
-  keywords: string
-  contact: string
+  info: Artist
 }
 
-const ModalInfo: React.FC<ModalInfoProps> = ({name, src, description, keywords, contact}) => {
+const ModalInfo: React.FC<ModalInfoProps> = ({info}) => {
   return (
     <div className='modal--info'>
-      <h1>{name}</h1>
-      <img src={src} />
+      <h1>{info.name}</h1>
+      <img src={info.image} alt='imagen de perfil'/>
       <div className='content'>
-        <p>{description}</p>
-        <p>{keywords}</p>
-        <p>Contacto : {contact}</p>
+        <p>{info.grouping}</p>
+        <p>{info.description}</p>
+        <p>Contacto : {info.email} {info.phonenumber}</p>
+        <p>Redes Sociales: {info.rrss}</p>
       </div>
     </div>
   )

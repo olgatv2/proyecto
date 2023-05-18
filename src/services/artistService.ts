@@ -16,9 +16,13 @@ export default class ArtistService {
         id: artist.id,
         name : artist.name,
         musicType: artist.musicType,
-        description: artist.description,
+        grouping: artist.grouping,
         placeholder: artist.placeholder,
-        image: artist.image
+        image: artist.image,
+        description : artist.description,
+        email : artist.email,
+        phonenumber: artist.phonenumber,
+        rrss : artist.rrss
       }
     })
 

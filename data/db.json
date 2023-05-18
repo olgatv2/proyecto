@@ -4,25 +4,37 @@
       "id": "1",
       "name": "Paca",
       "musicType": "Clásica",
-      "description": "Solista violín",
+      "grouping": "Solista violín",
       "placeholder": "Valencia",
-      "image": "public/violinist.png"
+      "image": "public/violinist.png",
+      "description": "Soy Paca, estudiante del conservatorio superior de Valencia. Soy experta en música clásica pero tmabién me gusta tocar covers.",
+      "email": "paca@gmail.com",
+      "phonenumber": "12399419",
+      "rrss": "@pacaviolin4"
     },
     {
       "id": "2",
       "name": "Los Mancos",
       "musicType": "Rock",
-      "description": "Grupo de rock",
+      "grouping": "Grupo de rock",
       "placeholder": "Alboraya, Valencia",
-      "image": "public/rock.png"
+      "image": "public/rock.png",
+      "description": "Soy Paca, estudiante del conservatorio superior de Valencia. Soy experta en música clásica pero tmabién me gusta tocar covers.",
+      "email": "paca@gmail.com",
+      "phonenumber": "12399419",
+      "rrss": "@pacaviolin4"
     },
     {
       "id": "3",
       "name": "Marianela",
       "musicType": "Pop",
-      "description": "Grupo",
+      "grouping": "Grupo",
       "placeholder": "Alboraya, Valencia",
-      "image": "public/guitar.png"
+      "image": "public/guitar.png",
+      "description": "Soy Paca, estudiante del conservatorio superior de Valencia. Soy experta en música clásica pero tmabién me gusta tocar covers.",
+      "email": "paca@gmail.com",
+      "phonenumber": "12399419",
+      "rrss": "@pacaviolin4"
     }
   ],
   "musicTypes": [
@@ -69,6 +81,36 @@
       "email": "paca@gmail.com",
       "password": "123",
       "id": 4
+    },
+    {
+      "name": "dlpald",
+      "email": "adpapdk@kofka.cn",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "name": "pere",
+      "email": "pere@pere.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "paca",
+      "email": "paca@gmail.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "name": "pada",
+      "email": "paca@gmail.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "name": "paca",
+      "email": "paca@gmail.co",
+      "password": "123",
+      "id": 9
     }
   ]
 }

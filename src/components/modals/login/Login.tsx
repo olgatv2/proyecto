@@ -20,7 +20,7 @@ const Login: React.FC<LoginProps> = ({ onClose }) => {
       alert(`Bienvenido ${result.name}`)
       onClose()
     } else {
-      alert('El usuario no existe.')
+      alert('Datos no correctos.')
     }
   }
 

@@ -57,8 +57,8 @@ export default class UserService {
 
   private static isRepeated(email: string, users: Array<User>): boolean {
     let result: boolean = false
-    const repeated = users.map((user) => { user.email == email })
-    if(repeated.length != 0) result = true
+    const repeated = users.find((user) =>  user.email == email )
+    if(!repeated) result = true
     return result
   }
 }

@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
 import Modal from '../../../../modals/Modal'
 import ModalInfo from '../../../../modals/info/ModalInfo'
+import { Artist } from '../../../../../types/artist'
 
 interface ProfileInfoProps {
-  name: string
-  src?: string
-  description: string
-  keywords: string
-  contact: string
+  profileInfo : Artist
 }
 
-const ProfileInfo: React.FC<ProfileInfoProps> = ({ name, src, description, keywords, contact }) => {
+const ProfileInfo: React.FC<ProfileInfoProps> = ({ profileInfo }) => {
   const [showModal, setShowModal] = useState(false)
   const handleOpen = () => {
     setShowModal(true)
@@ -24,7 +21,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ name, src, description, keywo
     <div>
       <button onClick={handleOpen}>Más info</button>
       {showModal && <Modal onClose={handleClose}>
-        <ModalInfo name={name} src={src} description={description} keywords={keywords} contact={contact} />
+        <ModalInfo info = {profileInfo} />
       </Modal>
       }
     </div>

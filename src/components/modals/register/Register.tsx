@@ -9,7 +9,7 @@ interface RegisterProps {
   onClose: () => void
 }
 
-const Register: React.FC <RegisterProps>= ({onClose}) => {
+const Register: React.FC<RegisterProps> = ({ onClose }) => {
   const [disabled, setDisabled] = useState<boolean | undefined>(true)
   const [userName, setUserName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
@@ -22,6 +22,7 @@ const Register: React.FC <RegisterProps>= ({onClose}) => {
     const fullfilled: boolean = (userName != '' && email != '' && password != '' && checked != '')
     const errors: boolean = Boolean(emailError || passwordError)
     const isWrong: boolean = !fullfilled || errors
+ 
     setDisabled(isWrong)
   }, [userName, email, password, checked])
 
@@ -29,7 +30,6 @@ const Register: React.FC <RegisterProps>= ({onClose}) => {
     setUserName(value)
   }
 
-  //Hay que controlar que no exista un usuario con este email.
   const handleEmail = (value: string, error: boolean) => {
     setEmailError(error)
     setEmail(value)
@@ -41,12 +41,14 @@ const Register: React.FC <RegisterProps>= ({onClose}) => {
     setChecked(value)
   }
 
-  //Hay que controlar que no exista ya el usuario por el email.
-  
   const validate = async () => {
-    const created: User = await UserService.signing(userName, email, password)
-    alert(`El usuario: ${created.name} ha sido creado`)
-    onClose()
+    if (await UserService.checkEmail(email)) {
+      const created: User = await UserService.signing(userName, email, password)
+      alert(`El usuario: ${created.name} ha sido creado`)
+      onClose()
+      return
+    }
+    alert(`Ya existe un usuario con este email.`)
   }
 
   return (

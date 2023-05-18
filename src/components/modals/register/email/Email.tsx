@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import UserService from '../../../../services/userService'
 
 interface EmailProps {
   onChange: (value: string, error: boolean) => void

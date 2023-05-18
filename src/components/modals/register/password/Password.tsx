@@ -10,24 +10,32 @@ const Password: React.FC<PasswordProps> = ({ onChange }) => {
   const [checkError, setCheckError] = useState<boolean>(false)
 
   useEffect(() => {
-    onChange(password, checkError)
+    check(password, checked)
   }, [password, checked])
-  
-  const handlePassword = (value : string) => {
-    setPassword(value)
+
+  useEffect(() => {
+    onChange(password, checkError)
+  }, [checkError])
+
+  const check = (passwordvalue : string, checkedvalue: string) => {
+    if(!isEmpty(passwordvalue)) {
+      setCheckError(true)
+      if(areEqual(passwordvalue, checkedvalue)) {
+        setCheckError(false)
+      }
+    }
   }
 
-  const check = (value: string) => {
-    setChecked(value)
-    setCheckError(!isEqual(value) || isEmpty())
+  const isEmpty = (passwordvalue: string) => {
+    let empty = true
+    if(passwordvalue != '') empty = false
+    return empty
   }
 
-  const isEqual = (value: string) => {
-    return password == value
-  }
-
-  const isEmpty = () => {
-    return password.length == 0
+  const areEqual = (passwordvalue: string, checkedvalue:string) => {
+    let equal = false
+    if(passwordvalue == checkedvalue) equal = true
+    return equal
   }
 
   return (
@@ -39,10 +47,9 @@ const Password: React.FC<PasswordProps> = ({ onChange }) => {
           role='textbox'
           aria-label='password'
           value={password}
-          onChange={e => handlePassword(e.target.value)}
+          onChange={e => setPassword(e.target.value)}
         />
       </div>
-
       <div className='register__field'>
         <label>Repite contraseña</label>
         <input
@@ -50,13 +57,13 @@ const Password: React.FC<PasswordProps> = ({ onChange }) => {
           role='textbox'
           aria-label='checked'
           value={checked}
-          onChange={e => check(e.target.value)}
+          onChange={e => setChecked(e.target.value)}
         />
         <div className='errorField'>
-        {checkError && (
-          <div className='error'>Las contraseñas no coinciden</div>
-        )}
-      </div>
+          {checkError && (
+            <div className='error'>Las contraseñas no coinciden</div>
+          )}
+        </div>
       </div>
     </div>
   )
