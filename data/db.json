@@ -69,48 +69,6 @@
       "name": "Marianela",
       "email": "marianela@gmail.com",
       "password": "1234"
-    },
-    {
-      "name": "pepa",
-      "email": "pepa@gmail.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "name": "paca",
-      "email": "paca@gmail.com",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "name": "dlpald",
-      "email": "adpapdk@kofka.cn",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "name": "pere",
-      "email": "pere@pere.com",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "name": "paca",
-      "email": "paca@gmail.com",
-      "password": "123",
-      "id": 7
-    },
-    {
-      "name": "pada",
-      "email": "paca@gmail.com",
-      "password": "123",
-      "id": 8
-    },
-    {
-      "name": "paca",
-      "email": "paca@gmail.co",
-      "password": "123",
-      "id": 9
     }
   ]
 }

@@ -25,6 +25,7 @@ export default class ArtistService {
         rrss : artist.rrss
       }
     })
+    
 
     return artistsList
   }

@@ -36,14 +36,25 @@ describe("Register", () => {
   })
 
   it('calls service when button is clicked', async () => {
-    const spy = vi.spyOn(UserService, 'signing')
-    
+    const spy = vi.spyOn(UserService, 'checkEmail')
+
     SUT.render()
     await SUT.completeForm()
-    const button = SUT.submitButton()
-    fireEvent.click(await button)
+    const button = await SUT.submitButton()
+    fireEvent.click(button)
    
     expect(spy).toHaveBeenCalled()
+  })
+
+  it('create a user when button is clicked and email is not repeated', async () => {
+    const spy = vi.spyOn(UserService, 'checkEmail').mockReturnValue(Promise.resolve(true))
+    const spy2 = vi.spyOn(UserService, 'signing')
+    SUT.render()
+    await SUT.completeForm()
+    const button = await SUT.submitButton()
+    fireEvent.click(button)
+
+    expect(spy2).toHaveBeenCalled()
   })
 })
 
@@ -69,6 +80,7 @@ class SUT {
     fireEvent.change(input, {
       target: { value: username },
     })
+    expect(input).toHaveValue('username')
   }
 
   static async fillEmail(email: string): Promise<void> {

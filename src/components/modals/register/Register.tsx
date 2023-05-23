@@ -22,9 +22,8 @@ const Register: React.FC<RegisterProps> = ({ onClose }) => {
     const fullfilled: boolean = (userName != '' && email != '' && password != '' && checked != '')
     const errors: boolean = Boolean(emailError || passwordError)
     const isWrong: boolean = !fullfilled || errors
- 
     setDisabled(isWrong)
-  }, [userName, email, password, checked])
+  }, [userName, email, password, checked, passwordError])
 
   const handleUserName = (value: string) => {
     setUserName(value)
