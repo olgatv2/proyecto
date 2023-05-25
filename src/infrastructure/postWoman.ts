@@ -1,9 +1,9 @@
 export default class PostWoman {
   public static readonly apiURL: string = "http://localhost:3000"
 
-  public static async get(baseUrl: string, queryParams?: Record<string, string>) {
+  public static async get(baseUrl: string, queryParams?: Record<string, any>) {
     const endpoint = new Endpoint(baseUrl)
-    endpoint.setQuery(queryParams)  
+    endpoint.setQuery(queryParams)
     const url = endpoint.toUrl()
     const response = await fetch(url,
       {
@@ -14,13 +14,35 @@ export default class PostWoman {
     return await response.json()
   }
 
-  public static async post(baseUrl:string, name: string, email:string, password:string) : Promise<Record<string, any>> {
+  public static async post(baseUrl: string, name: string, email: string, password: string): Promise<Record<string, any>> {
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({name, email, password})
+      body: JSON.stringify({ name, email, password })
     }
-    const response :Response = await fetch(baseUrl, options)
+    const response: Response = await fetch(baseUrl, options)
+    const created = await response.json()
+    return await created
+  }
+
+
+  public static async postArtist(baseUrl: string, 
+    name: string, 
+    musicType: string,
+    grouping: string,
+    placeholder: string, 
+    image: string, 
+    description: string,
+    email:string,
+    phonenumber: string,
+    rrss:string ) : Promise<Record<string, any>> {
+    
+      const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, musicType, grouping, placeholder, image, description, email, rrss })
+    }
+    const response: Response = await fetch(baseUrl, options)
     const created = await response.json()
     return await created
   }

@@ -45,6 +45,7 @@ const Register: React.FC<RegisterProps> = ({ onClose }) => {
       const created: User = await UserService.signing(userName, email, password)
       alert(`El usuario: ${created.name} ha sido creado`)
       onClose()
+      
       return
     }
     alert(`Ya existe un usuario con este email.`)

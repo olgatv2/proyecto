@@ -1,5 +1,4 @@
 export type Artist = {
-  id: string,
   name: string,
   musicType: string,
   grouping: string,
@@ -7,6 +6,6 @@ export type Artist = {
   image?: string,
   description : string,
   email : string,
-  phonenumber: string,
-  rrss : string
+  phonenumber?: string,
+  rrss? : string
 }

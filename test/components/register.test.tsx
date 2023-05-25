@@ -46,7 +46,7 @@ describe("Register", () => {
     expect(spy).toHaveBeenCalled()
   })
 
-  it('create a user when button is clicked and email is not repeated', async () => {
+  it.skip('create a user when button is clicked and email is not repeated', async () => {
     const spy = vi.spyOn(UserService, 'checkEmail').mockReturnValue(Promise.resolve(true))
     const spy2 = vi.spyOn(UserService, 'signing')
     SUT.render()

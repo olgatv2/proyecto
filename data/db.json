@@ -1,7 +1,7 @@
 {
   "artists": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Paca",
       "musicType": "Clásica",
       "grouping": "Solista violín",
@@ -13,7 +13,7 @@
       "rrss": "@pacaviolin4"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Los Mancos",
       "musicType": "Rock",
       "grouping": "Grupo de rock",
@@ -25,7 +25,7 @@
       "rrss": "@pacaviolin4"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Marianela",
       "musicType": "Pop",
       "grouping": "Grupo",
@@ -35,6 +35,17 @@
       "email": "paca@gmail.com",
       "phonenumber": "12399419",
       "rrss": "@pacaviolin4"
+    },
+    {
+      "name": "adadmd",
+      "musicType": "covers",
+      "grouping": "adodaom",
+      "placeholder": "vlaojav",
+      "image": "public/guitar.png",
+      "description": "adadad",
+      "email": "afafafa@kodkad.cn",
+      "rrss": "",
+      "id": 4
     }
   ],
   "musicTypes": [
