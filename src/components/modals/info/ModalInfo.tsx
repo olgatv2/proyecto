@@ -6,16 +6,29 @@ interface ModalInfoProps {
   info: Artist
 }
 
-const ModalInfo: React.FC<ModalInfoProps> = ({info}) => {
+const ModalInfo: React.FC<ModalInfoProps> = ({ info }) => {
   return (
     <div className='modal--info'>
-      <h1>{info.name}</h1>
-      <img src={info.image} alt='imagen de perfil'/>
+      <h1 className='title-font'>{info.name}</h1>
+      <img src={info.image} alt='imagen de perfil' />
       <div className='content'>
-        <p>{info.grouping}</p>
-        <p>{info.description}</p>
-        <p>Contacto : {info.email} {info.phonenumber}</p>
-        <p>Redes Sociales: {info.rrss}</p>
+        <div className='content__grouping'>{info.grouping}</div>
+        <div>{info.description}</div>
+        <div className='contact'>
+          <div>Contacto: </div>
+          <div className='contact__elements'>
+            <div>{info.email}</div>
+            <div>{info.phonenumber}</div>
+          </div>
+        </div>
+        <div className='rrss'>
+          <div>
+            Redes Sociales:
+          </div>
+          <div>
+            {info.rrss}
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -17,9 +17,9 @@ const Card: React.FC<CardProps> = ({ name, image, type, grouping, placeholder, i
 
   return (
     <div className="card">
-      <div className="card__title">{name}</div>
+      <div className="card__title title-font">{name}</div>
       <div className="card__body">
-        <img src={image} />
+        <img className="profile__img" src={image} />
         <div>
           <Element data={type} icon="public/play.png" />
           <Element data={grouping} icon="public/music_icon.png"/>

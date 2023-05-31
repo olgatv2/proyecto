@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import ArtistService from "../services/artistService"
-import Email from "./modals/register/email/Email"
-
+import ArtistService from "../../../services/artistService"
+import Email from "../../modals/register/email/Email"
+import './create.css'
 
 
 const Create: React.FC = () => {
@@ -18,13 +18,13 @@ const Create: React.FC = () => {
   const [rrss, setRrss] = useState('')
 
   useEffect(() => {
-    const fullfilled : boolean = (artistName != '' && musicType != '' && grouping != '' && placeholder != '' && email != '')
-    const isWrong : boolean = !fullfilled || emailError
+    const fullfilled: boolean = (artistName != '' && musicType != '' && grouping != '' && placeholder != '' && email != '')
+    const isWrong: boolean = !fullfilled || emailError
     setDisabled(isWrong)
     console.log(musicType)
   }, [artistName, musicType, grouping, placeholder, email])
 
-  const handleEmail =  (value: string, error: boolean) => {
+  const handleEmail = (value: string, error: boolean) => {
     setEmailError(error)
     setEmail(value)
   }
@@ -35,14 +35,14 @@ const Create: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="create">
       <h1>Crea tu Perfil</h1>
-      <div>
-        <div>
+      <div className="create__form">
+        <div className="create__element">
           <label>Nombre</label>
           <input type="text" onChange={e => setArtistName(e.target.value)} />
         </div>
-        <div>
+        <div className="create__element">
           <label>Tipo de música:</label>
           <div>
             <input type="radio" id="rock" name="type" value="rock"
@@ -74,30 +74,34 @@ const Create: React.FC = () => {
             <label htmlFor="jazz">Jazz</label>
           </div>
         </div>
-        <div>
+        <div className="create__element">
           <label>Tipo de agrupación:</label>
           <input type="text" onChange={(e) => setGrouping(e.target.value)} />
         </div>
-        <div>
+        <div className="create__element">
           <label>Descripción</label>
           <input type="text" onChange={e => setDescription(e.target.value)} />
         </div>
-        <div>
+        <div className="create__element">
           <label>Dónde</label>
           <input type="text" onChange={e => setPlaceholder(e.target.value)} />
         </div>
-        <div>
-          <Email onChange={handleEmail}/>
+        <div className="create__element">
+          <Email onChange={handleEmail} />
         </div>
-        <div>
+        <div className="create__element">
           <label>Número de teléfono</label>
           <input type="text" onChange={e => setPhoneNumber(e.target.value)} />
         </div>
-        <div>
+        <div className="create__element">
           <label>Redes sociales</label>
           <input type="text" onChange={e => setRrss(e.target.value)} />
         </div>
-        <button disabled={disabled} onClick={createCard}>Crear</button>
+      </div>
+      <div className="create__buttons">
+        <button className="create__button create__button--create" disabled={disabled} onClick={createCard}>Crear</button>
+        <button className="create__button">Reset</button>
+        <button className="create__button">Cancelar</button>
       </div>
     </div>
   )

@@ -11,8 +11,18 @@
   align-items: center;
 }
 
+.modal input {
+  border: solid 2px var(--secondary);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.modal input:focus {
+  border: 3px black;
+}
+
 .modal-content {
-  background-color: rgba(240, 237, 237, 0.899);
+  background-color: var(--light);
   backdrop-filter: blur(5px);
   width: 30vw;
   height: auto;
@@ -23,25 +33,43 @@
 }
 
 .modal-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.modal-header button {
+.xButton {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 6px;
+  padding: 2px;
   border-radius: 4px;
 }
 
-.modal-header img {
-  width: 1.5rem;
-  height: auto;
+.modal-body {
+  border-top: 2px solid var(--secondary);
+  border-bottom: 2px solid var(--secondary);
 }
 
-.modal-body {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+
+.modal-body button {
+  float: right;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: black;
+  color: var(--light);
+  font-weight: 800;
+  border: solid 2px var(--light);
+}
+
+.modal-body button:disabled {
+  border-color: var(--light);
+  color: var(--light);
+  background-color: var(--black-shadow);
+}
+
+.modal-body button:enabled:hover {
+  color: black;
+  border-color: var(--black-shadow);
+  background-color: var(--shadow);
 }
 
 

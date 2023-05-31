@@ -12,7 +12,7 @@ const Email: React.FC<EmailProps> = ({ onChange }) => {
 
   const handleEmail = (value: string) => {
     let error: string = ''
-    if (!emailRE.test(value)) error = 'bad.email'
+    if (!emailRE.test(value)) error = 'Email no válido'
     setWrongEmail(error)
     setEmail(value)
     onChange(value, Boolean(error))

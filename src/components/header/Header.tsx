@@ -8,12 +8,12 @@ const Header: React.FC = () => {
     <div className='header'>
       <div className='header__icons'>
         <button className='logo' onClick={() => window.location.reload()}>
-          <img src="public/logo.jpg" alt='logo'/>
+          <img src="public/logo.png" alt='logo'/>
         </button>
         <HeaderMenu />
         <HeaderButtons />
       </div>
-      <img src="public/header.jpg" alt='musicians'/>
+      <img className="header__img" src="public/head.jpg" alt='musicians'/>
     </div>
   )
 }

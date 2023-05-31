@@ -1,5 +1,4 @@
 import React from "react";
-import './step.css'
 
 interface stepProps {
   srcStep : string
@@ -9,7 +8,7 @@ interface stepProps {
 
 const Step: React.FC<stepProps> = ({srcStep, stepNumber, stepDescription}) => {
   return (
-    <div className="step">
+    <div>
       <img src={srcStep} className="icon"/>
       <h2>Paso {stepNumber}</h2>
       <p>{stepDescription}</p>

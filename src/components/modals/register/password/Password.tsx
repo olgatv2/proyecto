@@ -39,7 +39,7 @@ const Password: React.FC<PasswordProps> = ({ onChange }) => {
   }
 
   return (
-    <div>
+    <>
       <div className='register__field'>
         <label>Contraseña</label>
         <input
@@ -65,7 +65,7 @@ const Password: React.FC<PasswordProps> = ({ onChange }) => {
           )}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 export default Password

@@ -4,9 +4,9 @@ import './footer.css'
 const Footer: React.FC = () => {
   return (
     <section className="footer">
-      <div className="footer__columns">
+      <div className="footer__columns invert">
         <div className="column">
-          <img src="public/logo.jpg" alt="logo" className="logo" />
+          <img src="public/logo.png" alt="logo" className="logo" />
         </div>
         <div className="column">
           <h4>Sobre nosotros</h4>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="copyRight">CopyRight ©</div>
+      <div className="copyRight">Web creada por Olga Tello Villar</div>
     </section>
   )
 }

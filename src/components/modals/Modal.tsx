@@ -12,7 +12,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, children }) => {
       <div className='modal-content'>
         <div className='modal-header'>
           <button onClick={onClose}>
-            <img src="public/iconos/equis.png" className='icon'/>
+            <img src="public/iconos/equis.png" className='icon xButton'/>
           </button>
         </div>
         <div className='modal-body'>

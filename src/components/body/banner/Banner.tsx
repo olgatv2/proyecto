@@ -6,7 +6,7 @@ const Banner: React.FC = () => {
 
   return (
     <div className="banner">
-      <h1>¿Cómo funciona?</h1>
+      <h1 className="title-font">¿Cómo funciona?</h1>
       <div className="steps">
         <Step srcStep="/search.png" stepNumber="1" stepDescription="Busca según el tipo de música que quieras" />
         <Step srcStep="/star.png" stepNumber="2" stepDescription="Consulta valoraciones de nuestros usuarios" />

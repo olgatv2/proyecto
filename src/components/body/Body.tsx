@@ -3,7 +3,6 @@ import Cards from "./cards/Cards";
 import Banner from "./banner/Banner";
 import Nav from "./nav/Nav";
 import './body.css'
-import Create from "../Create";
 
 const Body: React.FC = () => {
 
@@ -22,7 +21,6 @@ const Body: React.FC = () => {
         }
       </div>
       <Banner />
-      <Create />
     </div>
   )
 }

@@ -1,0 +1,36 @@
+.create {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.create__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create__element {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.create__buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.create__button {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(207, 205, 205);
+}
+
+.create__button--create {
+  background-color: black;
+  color: white;
+}

@@ -35,17 +35,6 @@
       "email": "paca@gmail.com",
       "phonenumber": "12399419",
       "rrss": "@pacaviolin4"
-    },
-    {
-      "name": "adadmd",
-      "musicType": "covers",
-      "grouping": "adodaom",
-      "placeholder": "vlaojav",
-      "image": "public/guitar.png",
-      "description": "adadad",
-      "email": "afafafa@kodkad.cn",
-      "rrss": "",
-      "id": 4
     }
   ],
   "musicTypes": [
@@ -79,7 +68,8 @@
       "id": 1,
       "name": "Marianela",
       "email": "marianela@gmail.com",
-      "password": "1234"
+      "password": "1234",
+      "card": true
     }
   ]
 }

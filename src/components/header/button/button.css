@@ -11,7 +11,7 @@
 }
 
 .header__buttons button:hover {
-  background-color: rgba(2, 2, 2, 0.584);
+  background-color: var(--secondary);
 }
 
 

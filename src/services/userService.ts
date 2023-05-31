@@ -3,6 +3,8 @@ import { User } from "../types/user"
 
 export default class UserService {
   private static usersList: Array<User>
+  public static currentUser: User | undefined
+  private static logued : boolean
 
   public static async obtain(): Promise<Array<User>> {
     const endPoint: string = PostWoman.apiURL + '/users'
@@ -13,7 +15,16 @@ export default class UserService {
   public static async login(name: string, password: string): Promise<User | undefined> {
     const usersList = await this.obtain()
     const loguedUser = usersList.find((user: User) => (user.name == name) && (user.password == password))
+    if(loguedUser) {
+      this.currentUser = loguedUser 
+      this.logued = true
+    }
     return loguedUser
+  }
+
+  public static async logOut() {
+    this.currentUser = undefined
+    this.logued = false
   }
 
   public static async signing(name: string, email: string, password: string): Promise<User> {
@@ -32,6 +43,7 @@ export default class UserService {
       name: user.name,
       email: user.email,
       password: user.password,
+      card: user.card
     }
     return registered
   }
@@ -43,6 +55,7 @@ export default class UserService {
         name: user.name,
         email: user.email,
         password: user.password,
+        card: user.card
       }
     })
     this.usersList = registers
