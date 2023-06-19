@@ -2,9 +2,10 @@ export default class PostWoman {
   public static readonly apiURL: string = "http://localhost:3000"
 
   public static async get(baseUrl: string, queryParams?: Record<string, any>) {
-    const endpoint = new Endpoint(baseUrl)
+    const endpoint = new Endpoint(this.apiURL + baseUrl)
     endpoint.setQuery(queryParams)
     const url = endpoint.toUrl()
+    console.log(url)
     const response = await fetch(url,
       {
         method: "GET",

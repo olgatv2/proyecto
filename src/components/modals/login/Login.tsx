@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './login.css'
 import UserService from '../../../services/userService'
 import { User } from '../../../types/user'
+import { LoginService } from '../../../services/login'
 
 interface LoginProps {
   onClose: () => void

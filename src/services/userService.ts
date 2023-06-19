@@ -7,7 +7,7 @@ export default class UserService {
   private static logued : boolean
 
   public static async obtain(): Promise<Array<User>> {
-    const endPoint: string = PostWoman.apiURL + '/users'
+    const endPoint: string ='/users'
     const usersGet = await PostWoman.get(endPoint)
     return this.parseUsers(usersGet)
   }
